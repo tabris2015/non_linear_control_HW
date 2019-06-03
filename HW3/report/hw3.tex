@@ -82,12 +82,13 @@ then, our state space form model is as follows:
 
 \begin{align}
     \dot{x_1} &= x_2 \\
-    \dot{x_2} &= -\frac{(Bv + D|v|^2)cos(\theta_0)}{M} - g \\
+    \dot{x_2} &= -\frac{(Bv + D|v|^2)cos(\theta)}{M} - g \\
     \dot{x_3} &= x_4 \\
-    \dot{x_4} &= -\frac{(Bv + D|v|^2)sin(\theta_0)}{M}
+    \dot{x_4} &= -\frac{(Bv + D|v|^2)sin(\theta)}{M}
 \end{align}
 
-where $v = \sqrt{x_2^2 + x_4^2}$ the current magnitude of the velocity and $\theta_0$ the initial angle. The initial conditions are 
+where $v = \sqrt{x_2^2 + x_4^2}$ the current magnitude of the velocity and $\theta$ the angle between the horizontal 
+axis and the velocity vector. The initial conditions are 
 defined statistically by $E[\theta_0] = 45[deg]$ , $E[v_0]=200[m/s]$ and standard deviation of 3\%. Then, the initial condition vector 
 given $\theta_0$ and $v_0$ are:
 
