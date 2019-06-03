@@ -16,11 +16,6 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 
-% \usepackage[T1]{fontenc}
-
-% \usepackage{helvet}
-% \renewcommand{\familydefault}{\sfdefault}
-
 \usepackage{amsmath,amsfonts,amssymb,amsthm,cancel,icomma,nicefrac,mathrsfs,
             eurosym,verbatim,environ,ifthen,ifdraft,pdfpages,float,booktabs}
 \allowdisplaybreaks[1] 
@@ -36,7 +31,7 @@
        tabsize=2,
   }
 
-  \lstset{language=Matlab,%
+\lstset{language=Matlab,%
   %basicstyle=\color{red},
   breaklines=true,%
   morekeywords={matlab2tikz},
@@ -52,7 +47,6 @@
   emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
   %emph=[2]{word1,word2}, emphstyle=[2]{style},    
 }
-
 
 \title{Homework 1 - Equilibria, Eigen Analysis, Simulation}
 \author{Jose Eduardo Laruta Espejo \\ Facultad de Ingeniería - Universidad Mayor de San Andrés}
@@ -225,29 +219,34 @@ In order to get a better understanding of the nature of the equilibria of our sy
 the results are shown in Figure(\ref{fig:eigenvectors}).
 
 %%%% Figura 1 %%%%%%
-\begin{figure}[!h] 
+\begin{figure}[H] 
     \centering
-    \includegraphics[width=1.1\textwidth]{../matlab/img/eigenvectors.png}
+    \includegraphics[width=0.8\textwidth]{../matlab/img/eigenvectors.png}
     \caption{Graphic Visualization of the system eigenvectors at equilibria}
     \label{fig:eigenvectors}
     \end{figure}
-\end{document}
-
+    
 \subsection{Simulation of trajectories}
 Once we analyzed the equilibria, and the behaviour of the system near them through eigen analysis, we can run several simulations 
 for visualizing the nature of the trajectories and validate the previous results. In this case, a little routine for run 
 several simulation in a loop with random initial condition has been developed, the results are shown in Figure(\ref{fig:trajectories}).
 
-\lstinputlisting{../matlab/trajectories.m}
+For this simulation we ran 200 trajectories with random initial conditions. It is clear that the trajectories behave as we expected 
+when we analyzed equilibria and eigenvalues and eigenvectors of SSL system at equilibria. 
 
+\textbf{Note:} The code for both the simulations and this report can be found in this \href{https://github.com/tabris2015/non_linear_control_HW/tree/master/HW1}{github repository}. 
+
+
+\lstinputlisting{../matlab/trajectories.m} 
+    
 %%%% Figura 1 %%%%%%
 \begin{figure}[!h] 
     \centering
     \includegraphics[width=1.1\textwidth]{../matlab/img/trajectories.png}
     \caption{Graphic Visualization of the system trajectories}
-    \label{fig:trajectories}
+        \label{fig:trajectories}
     \end{figure}
 \end{document}
+    
 
-For this simulation we ran 200 trajectories with random initial conditions. It is clear that the trajectories behave as we expected 
-when we analyzed equilibria and eigenvalues and eigenvectors of SSL system at equilibria. 
+\end{document}

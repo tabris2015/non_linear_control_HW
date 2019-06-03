@@ -12,7 +12,7 @@ xlabel('x1');
 ylabel('x2');
 title('trajectories simulation')
 xlim([-5 25])
-ylim([30 70])
+ylim([30 75])
 % random initial conditions
 for i=1:200
     random_x = [((x1_max - x1_min).*rand(1,1) + x1_min); ((x2_max - x2_min).*rand(1,1) + x2_min)];
